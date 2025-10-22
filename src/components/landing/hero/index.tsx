@@ -1,23 +1,30 @@
+import { Metadata } from 'next';
 import Button from '@/ui/button';
 import Image from 'next/image';
 
+export const metadata: Metadata = {
+  title: 'Modele seu Corpo | CalistenyX',
+  description: 'Transforme seu corpo com treinos e alcance sua melhor versão.',
+};
+
 export default function HeroSection() {
   return (
-    <section role="region" aria-labelledby="hero-title" className="container">
+    <section aria-labelledby="hero-title" className="container">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:mt-12 z-1 text-white">
-        <div>
-          <div className="relative flex items-center">
+        <div className="space-y-6 md:space-y-8">
+          {/* Hero Title with Badge */}
+          <div className="relative">
             <h1
               id="hero-title"
-              className="text-7xl md:text-6xl lg:text-8xl uppercase font-bold"
+              className="text-5xl md:text-6xl lg:text-8xl uppercase font-bold leading-tight"
             >
               Modele seu corpo
             </h1>
+
+            {/* Training Frequency */}
             <span
-              aria-label="Seis vezes por semana"
-              role="text"
-              tabIndex={0}
-              className="text-sm uppercase font-bold absolute top-6.5 left-[290px] md:top-20 md:left-[200px] lg:top-31 lg:left-[330px] leading-tight bg-brand px-2 py-2 lg:px-3 lg:py-4"
+              className="absolute -top-2 -right-4 md:top-0 md:right-0 lg:-top-4 lg:-right-8 text-xs md:text-sm uppercase font-bold leading-tight bg-brand px-3 py-2 lg:px-4 lg:py-3 whitespace-nowrap"
+              aria-label="Treino seis vezes por semana"
             >
               6x
               <br />
@@ -25,49 +32,42 @@ export default function HeroSection() {
             </span>
           </div>
 
-          <div>
-            <p
-              id="hero-description"
-              aria-describedby="hero-description"
-              tabIndex={0}
-              className="text-base md:text-sm lg:text-xl tracking-wider font-normal"
-            >
-              Transforme seu corpo com treinos de calistenia e alcance a sua
-              melhor versão. Treine em qualquer lugar, sem a necessidade de
-              equipamentos caros. Resultados reais, disciplina e melhoria
-              constante.
-            </p>
-          </div>
+          {/* Hero Description */}
+          <p className="text-base md:text-lg lg:text-xl tracking-wide font-normal max-w-xl">
+            Transforme seu corpo com treinos de calistenia e alcance a sua
+            melhor versão. Treine em qualquer lugar, sem a necessidade de
+            equipamentos caros. Resultados reais, disciplina e melhoria
+            constante.
+          </p>
 
-          <div className="flex gap-4 mt-8">
+          {/* Buttons */}
+          <div className="flex flex-wrap gap-4 pt-2">
             <Button
-              ariaLabel="Começar o treino agora"
-              ariaRole="button"
-              ariaIndex={0}
-              href="/"
+              href="/cadastro"
               variant="primary"
+              aria-label="Começar treino de calistenia agora"
             >
               Começe Agora
             </Button>
             <Button
-              ariaLabel="Saber mais sobre treinos de calistenia"
-              ariaRole="button"
-              ariaIndex={0}
-              href="/"
+              href="/sobre"
               variant="outline"
+              aria-label="Conhecer mais sobre nossos treinos de calistenia"
             >
               Conheça mais
             </Button>
           </div>
         </div>
 
-        <div className="hidden md:block">
+        {/* Hero Image */}
+        <div className="hidden md:flex md:items-end md:justify-center">
           <Image
             src="/heroimage.png"
             width={500}
             height={500}
-            alt="Musculação"
+            alt="Atleta praticando calistenia com exercícios de peso corporal"
             className="object-contain object-bottom"
+            priority
           />
         </div>
       </div>

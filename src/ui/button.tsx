@@ -9,8 +9,6 @@ interface ButtonProps {
   children: React.ReactNode;
   variant?: 'primary' | 'outline';
   ariaLabel?: string;
-  ariaRole?: string;
-  ariaIndex?: number;
 }
 
 export default function Button({
@@ -18,8 +16,6 @@ export default function Button({
   children,
   variant = 'primary',
   ariaLabel,
-  ariaIndex,
-  ariaRole,
 }: ButtonProps) {
   const baseStyles =
     'inline-block font-semibold px-6 py-3 transition-all duration-400';
@@ -34,8 +30,6 @@ export default function Button({
     <Link
       href={href}
       aria-label={ariaLabel}
-      role={ariaRole}
-      tabIndex={ariaIndex}
       className={clsx(baseStyles, variants[variant])}
     >
       {children}
