@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;900&display=swap');
 @import 'tailwindcss';
 
 @theme {
@@ -9,6 +10,7 @@
   --color-body: #cccccc;
 
   --font-title: 'Trebuchet MS', Helvetica, sans-serif;
+  --font-sub: 'Inter', 'Trebuchet MS', sans-serif;
   --font-body: Verdana, Geneva, sans-serif;
 }
 

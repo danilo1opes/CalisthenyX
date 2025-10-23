@@ -44,7 +44,9 @@ export default function Program() {
 
               {/* Title and Description Card */}
               <h2 className="font-title text-xl">{item.title}</h2>
-              <p className="font-body text-sm text-body">{item.description}</p>
+              <p className="font-sub text-sm font-light text-body">
+                {item.description}
+              </p>
 
               {/* Button Card */}
               <Link

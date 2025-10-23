@@ -7,7 +7,7 @@ import React from 'react';
 interface ButtonProps {
   href: string;
   children: React.ReactNode;
-  variant?: 'primary' | 'outline';
+  variant?: 'primary' | 'secondary' | 'outline';
   ariaLabel?: string;
 }
 
@@ -22,6 +22,8 @@ export default function Button({
 
   const variants = {
     primary: 'bg-brand text-white hover:bg-brand/80',
+    secondary:
+      'border border-white text-white hover:bg-white hover:text-black hover:border-white',
     outline:
       'border border-brand text-white hover:bg-white hover:text-black hover:border-white',
   };
