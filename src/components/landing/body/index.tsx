@@ -25,7 +25,7 @@ export default function ReadyBody() {
             Comece Agora
           </Button>
 
-          <p className="text-snow mt-6 lg:mt-8 font-body antialiased text-base lg:text-xl leading-relaxed">
+          <p className="text-snow mt-6 lg:mt-8 font-body antialiased text-base lg:text-xl 2xl:text-2xl leading-relaxed">
             Transforme seu corpo com treinos de calistenia e alcance a sua
             melhor versão. Treine em qualquer lugar, sem a necessidade de
             equipamentos caros. Resultados reais, disciplina e melhoria
