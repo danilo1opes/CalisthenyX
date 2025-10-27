@@ -22,7 +22,7 @@ export default function AboutUs() {
         {/* Image 2  */}
         <div className="hidden md:order-2 lg:block w-64 lg:w-64 ml-4 lg:ml-8 relative">
           <Image
-            src={'/teste.jpg'}
+            src={'/forca.jpg'}
             width={300}
             height={400}
             className="w-full h-auto object-cover shadow-lg"
