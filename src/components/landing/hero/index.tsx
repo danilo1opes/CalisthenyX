@@ -16,13 +16,13 @@ export default function HeroSection() {
           <div className="relative flex items-center">
             <h1
               id="hero-title"
-              className="text-7xl md:text-6xl lg:text-8xl uppercase font-bold"
+              className="text-[5.5rem] leading-20 md:text-6xl lg:text-8xl uppercase font-bold"
             >
               Modele seu corpo
             </h1>
             <span
               aria-label="Treino Seis vezes por semana"
-              className="text-sm uppercase font-bold absolute top-6.5 left-[290px] md:top-20 md:left-[200px] lg:top-31 lg:left-[330px] leading-tight bg-brand px-2 py-2 lg:px-3 lg:py-4"
+              className="text-sm uppercase font-bold absolute top-28 left-[180px] md:top-20 md:left-[200px] lg:top-31 lg:left-[330px] leading-tight bg-brand px-2 py-2 lg:px-3 lg:py-4"
             >
               6x
               <br />

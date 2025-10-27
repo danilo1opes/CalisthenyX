@@ -1,4 +1,5 @@
 import Navbar from '@/components/common/navbar';
+import AboutUs from '@/components/landing/about';
 import ReadyBody from '@/components/landing/body';
 import HeroSection from '@/components/landing/hero';
 import Program from '@/components/landing/program';
@@ -14,6 +15,7 @@ export default async function HomePage() {
       <section>
         <Program />
         <ReadyBody />
+        <AboutUs />
       </section>
     </>
   );
