@@ -24,7 +24,7 @@ export default function Program() {
             className="text-4xl uppercase text-snow font-title font-bold lg:mb-18"
           >
             Modalidades
-          </h1>
+          </h1>c
         </div>
 
         {/* Article Cards */}

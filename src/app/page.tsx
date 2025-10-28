@@ -2,6 +2,7 @@ import Navbar from '@/components/common/navbar';
 import AboutUs from '@/components/landing/about';
 import ReadyBody from '@/components/landing/body';
 import HeroSection from '@/components/landing/hero';
+import Pricing from '@/components/landing/preco';
 import Program from '@/components/landing/program';
 
 export default async function HomePage() {
@@ -16,6 +17,7 @@ export default async function HomePage() {
         <Program />
         <ReadyBody />
         <AboutUs />
+        <Pricing />
       </section>
     </>
   );
