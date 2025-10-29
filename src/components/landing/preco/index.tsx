@@ -6,7 +6,7 @@ export default function Pricing() {
   return (
     <section
       aria-labelledby="pricing-title"
-      className="container px-6 py-12 md:py-20 lg:py-24"
+      className="container px-6 py-12 md:pt-12 md:pb-24 lg:py-24"
     >
       {/* Title */}
       <header className="flex justify-center">
@@ -24,12 +24,12 @@ export default function Pricing() {
             key={index}
             className={`border-gray rounded-4xl transition-all ${
               index == 1
-                ? 'bg-gradient-to-b from-linear-snow to-linear-dark px-6 md:px-8 py-6 md:scale-110 shadow-2xl'
+                ? 'bg-gradient-to-b from-linear-snow to-linear-dark px-6 md:px-8 py-6 lg:scale-110 shadow-2xl'
                 : 'bg-program border px-6 py-4 shadow-xl'
             }`}
             aria-label={`Plano ${price.title} - R$${price.value} por mês`}
           >
-            <div>
+            <div className="h-full flex flex-col">
               {/* Title Card */}
               <h3 className="text-snow font-value text-lg md:text-xl font-semibold after:content-[''] after:block after:w-full after:h-[1px] after:bg-snow after:mt-4">
                 Plano {price.title}
@@ -54,27 +54,27 @@ export default function Pricing() {
               </p>
 
               <ul
-                className="space-y-4 md:space-y-6 mt-6"
+                className="space-y-4 md:space-y-6 mt-6 flex-grow"
                 aria-label={`Benefícios do plano ${price.title}`}
               >
                 {price.services.map((service, i) => (
                   <li
                     key={i}
-                    className="text-snow font-sub font-normal text-sm md:text-base flex gap-3 md:gap-4 items-center"
+                    className="text-snow font-sub font-normal text-sm md:text-base flex gap-3 md:gap-4 items-start"
                   >
                     <FiCheck
-                      className={`flex-shrink-0 ${
+                      className={`flex-shrink-0 mt-1 ${
                         index === 1 ? 'text-snow' : 'text-orange-500'
                       }`}
-                      size={24}
+                      size={20}
                       aria-hidden="true"
                     />
-                    {service}
+                    <span>{service}</span>
                   </li>
                 ))}
               </ul>
 
-              <div className="mt-6 mb-6 md:mb-8">
+              <div className="mt-6 mb-2">
                 <Button
                   aria-label={`Assinar plano ${price.title} por R$${price.value} por mês`}
                   href="/"

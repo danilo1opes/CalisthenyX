@@ -5,7 +5,7 @@ export default function AboutUs() {
   return (
     <section
       aria-labelledby="hero-title"
-      className="px-6 md:px-0 md:py-24 2xl:py-32"
+      className="px-6 md:px-0 md:py-8 2xl:py-32"
     >
       <div className="grid grid-cols-1 md:grid-cols-[auto_auto_1fr] gap-6 md:gap-20 2xl:gap-28 items-start max-w-[1920px] 2xl:mx-auto">
         {/* Image 1 */}
@@ -51,7 +51,7 @@ export default function AboutUs() {
         <div className="order-1 md:order-3">
           <h1
             id="hero-title"
-            className="text-snow text-5xl lg:text-7xl 2xl:text-8xl font-sub font-black uppercase mb-6 lg:mb-8 2xl:mb-10"
+            className="text-snow text-5xl lg:text-7xl font-sub font-black uppercase mb-6 lg:mb-8 2xl:mb-10"
           >
             Sobre nós
           </h1>
@@ -64,7 +64,7 @@ export default function AboutUs() {
             Conheça a equipe
           </Button>
 
-          <p className="text-snow mt-6 lg:mt-8 2xl:mt-10 font-body antialiased md:text-sm lg:text-xl 2xl:text-2xl leading-relaxed">
+          <p className="text-snow font-body antialiased text-base md:text-lg lg:text-xl leading-relaxed">
             Somos apaixonados por calistenia e dedicados a ajudar você a atingir
             seu potencial máximo. Nossa equipe de atletas e treinadores
             especializados está pronta para guiar sua jornada de transformação

@@ -1,4 +1,4 @@
-import { NavbarItem } from '@/components/landing/navitem';
+import { NavbarItem } from '@/ui/navitem';
 
 export const items: Array<NavbarItem> = [
   {

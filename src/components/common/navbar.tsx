@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import React from 'react';
-import NavItem from '../landing/navitem';
+import NavItem from '../../ui/navitem';
 import { usePathname } from 'next/navigation';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { items } from '@/data/navItems';
