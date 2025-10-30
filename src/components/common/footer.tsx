@@ -4,21 +4,21 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="container pt-12 md:pt-4 pb-4">
-      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
+      <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-2 md:gap-0 lg:gap-16">
         {/* Logo and Description*/}
         <div className="max-w-md">
           <Link
             href="/"
             aria-label="Página inicial da CalisthenyX"
-            className="inline-block text-snow text-3xl md:text-4xl font-bold font-title tracking-wide"
+            className="inline-block text-snow text-3xl md:text-4xl 2xl:text-5xl font-bold font-title tracking-wide"
           >
             Calisteny
-            <span className="text-brand text-4xl md:text-5xl font-title">
+            <span className="text-brand text-4xl md:text-5xl 2xl:text-6xl font-title">
               X
             </span>
           </Link>
 
-          <p className="text-fot font-sub font-normal mt-4">
+          <p className="text-fot font-sub font-normal mt-4 lg:text-lg">
             A CalisthenyX nasceu com o propósito de transformar o corpo e a
             mente através da calistenia. Aqui, acreditamos que disciplina, foco
             e superação são os verdadeiros pilares da força.
@@ -26,10 +26,10 @@ export default function Footer() {
         </div>
 
         {/* Navigation */}
-        <nav className="flex flex-col sm:flex-row gap-8 sm:gap-12 md:gap-16 lg:gap-32 md:justify-between">
+        <nav className="flex flex-col sm:flex-row gap-8 sm:gap-12 md:gap-16 lg:gap-32 md:justify-start lg:justify-center">
           {footer.map((item, index) => (
             <div key={index}>
-              <h2 className="text-snow font-bold font-sub text-lg mb-3">
+              <h2 className="text-snow font-bold font-sub text-lg 2xl:text-xl mb-3">
                 {item.title}
               </h2>
               <ul className="space-y-2">
@@ -51,7 +51,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <p className="text-center text-fot font-sub font-normal mt-12 pt-8 border-t border-fot/20">
+      <p className="text-center text-fot font-sub font-normal mt-12 pt-8 border-t border-fot/20 2xl:text-xl">
         2025 © CalisthenyX • Todos os direitos reservados | Desenvolvido por
         danilo1opes
       </p>

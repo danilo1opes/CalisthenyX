@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Personal() {
   return (
-    <section className="container mx-auto px-4 py-12 lg:mt-32">
+    <section className="container mx-auto px-4 py-12">
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 max-w-4xl mx-auto">
         {/* Profile Image */}
         <div className="relative flex-shrink-0">
@@ -20,7 +20,7 @@ export default function Personal() {
         {/* Content */}
         <div className="flex flex-col text-center md:text-left max-w-xl">
           <div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-sub font-semibold text-snow mb-2 tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-value font-semibold text-snow mb-2 tracking-tight">
               Danilo Lopes
             </h1>
             <p className="text-xl md:text-2xl font-light font-sub text-snow  tracking-wide">

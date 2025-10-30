@@ -6,23 +6,22 @@ export default function Pricing() {
   return (
     <section
       aria-labelledby="pricing-title"
-      className="container px-6 py-12 md:pt-12 md:pb-24 lg:py-24"
+      className="container px-6 py-12 md:pt-12 md:pb-24"
     >
       {/* Title */}
       <header className="flex justify-center">
         <h2
           id="pricing-title"
-          className="text-3xl md:text-4xl uppercase text-snow font-title font-bold mb-8 md:mb-12 lg:mb-18"
+          className="text-3xl md:text-4xl xl:text-5xl uppercase text-snow font-value font-bold mb-8 md:mb-12 lg:mb-18"
         >
           Planos
         </h2>
       </header>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12 items-center md:justify-center">
         {prices.map((price, index) => (
           <article
             key={index}
-            className={`border-gray rounded-4xl transition-all ${
+            className={`border-gray rounded-4xl transition-all md:max-w-md md:mx-auto lg:max-w-none lg:mx-0 ${
               index == 1
                 ? 'bg-gradient-to-b from-linear-snow to-linear-dark px-6 md:px-8 py-6 lg:scale-110 shadow-2xl'
                 : 'bg-program border px-6 py-4 shadow-xl'
@@ -78,7 +77,7 @@ export default function Pricing() {
                 <Button
                   aria-label={`Assinar plano ${price.title} por R$${price.value} por mês`}
                   href="/"
-                  variant={index === 1 ? 'secondary' : 'outline'}
+                  variant={index === 1 ? 'mobile' : 'outline'}
                 >
                   Começe Agora
                 </Button>

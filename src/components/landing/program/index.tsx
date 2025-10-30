@@ -7,14 +7,14 @@ export default function Program() {
   return (
     <section
       aria-labelledby="program-heading"
-      className="bg-program-radial pt-12 md:pt-14 lg:py-20 xl:py-24"
+      className="bg-program-radial pt-12 md:pt-14"
     >
       <div className="container">
         <div className="flex justify-center mb-12 md:mb-14 lg:mb-16 xl:mb-20">
           {/* Program Title */}
           <h1
             id="program-heading"
-            className="text-3xl md:text-4xl xl:text-5xl uppercase text-snow font-title font-bold"
+            className="text-3xl md:text-4xl xl:text-5xl uppercase text-snow font-value font-bold"
           >
             Modalidades
           </h1>

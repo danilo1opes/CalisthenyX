@@ -15,17 +15,17 @@ export default function HeroSection() {
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:mt-12 z-1 text-white">
         <div>
-          {/* Hero Title with Badge */}
+          {/* Hero Title  */}
           <div className="relative flex items-center">
             <h1
               id="hero-title"
-              className="text-[5.5rem] leading-20 md:leading-16 lg:leading-20 md:text-6xl lg:text-8xl uppercase font-bold"
+              className="text-[4.8rem] leading-18 md:leading-20 lg:leading-28 md:text-[5.5rem] lg:text-9xl uppercase font-bold"
             >
               Modele seu corpo
             </h1>
             <span
               aria-label="Treino Seis vezes por semana"
-              className="text-sm uppercase font-bold absolute top-28 left-[180px] md:top-22 md:left-[215px] lg:top-26 lg:left-[330px] leading-tight bg-brand px-2 py-2 lg:px-3 lg:py-4"
+              className="text-sm uppercase font-bold absolute top-25 left-[180px] md:top-28 md:left-[215px] lg:top-38 lg:left-[280px] leading-tight bg-brand px-2 py-2 lg:px-3 lg:py-4"
             >
               6x
               <br />

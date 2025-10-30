@@ -6,7 +6,7 @@ export default function ChooseUs() {
   return (
     <section
       aria-labelledby="choose-title"
-      className="container py-12 md:pt-24 lg:py-20"
+      className="container pt-12 mb-4 md:pt-24 lg:py-20"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 items-center max-w-7xl mx-auto">
         {/* Coluna 1 */}
@@ -64,7 +64,7 @@ export default function ChooseUs() {
             {choose[0].text.map((list, index) => (
               <li
                 key={index}
-                className="text-list text-base md:text-lg lg:text-xl flex items-start font-sub font-normal gap-3 md:gap-3 uppercase"
+                className="text-list text-base md:text-lg lg:text-xl flex items-center font-sub font-normal gap-3 md:gap-3 uppercase"
               >
                 <FiCheckSquare
                   className="text-brand flex-shrink-0 mt-1"
