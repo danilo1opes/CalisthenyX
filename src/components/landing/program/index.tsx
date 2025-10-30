@@ -25,7 +25,7 @@ export default function Program() {
           {program.map((item) => (
             <article
               key={item.id}
-              className="bg-program border border-snow text-snow py-8 px-6 md:py-10 md:px-8 lg:py-12 lg:px-10 xl:py-14 xl:px-12 space-y-4 md:space-y-5 lg:space-y-6 hover:border-brand transition-colors"
+              className="bg-program border border-snow text-snow py-8 px-6 md:py-10 md:px-8 lg:py-12 lg:px-10 xl:py-14 xl:px-12 space-y-4 md:space-y-5 lg:space-y-6 hover:border-brand active:border-brand focus:border-brand transition-colors"
             >
               {/* Image Card */}
               <Image
@@ -47,7 +47,7 @@ export default function Program() {
               {/* Button Card */}
               <Link
                 aria-label={`Saiba mais sobre ${item.title}`}
-                className="font-body flex items-center gap-3 md:gap-4 text-sm md:text-base hover:text-brand transition-colors pt-2"
+                className="font-body flex items-center gap-3 md:gap-4 text-sm md:text-base hover:text-brand active:text-brand focus:text-brand transition-colors pt-2"
                 href={'/'}
               >
                 {item.link}

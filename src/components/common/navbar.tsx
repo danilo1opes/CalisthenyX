@@ -110,7 +110,7 @@ export default function Navbar() {
                 role="menuitem"
                 tabIndex={open ? 0 : -1}
                 aria-current={pathname === item.url ? 'page' : undefined}
-                className={`hover:text-brand ${
+                className={`hover:text-brand active:text-brand focus:text-brand ${
                   pathname === item.url ? 'text-snow' : ''
                 }`}
               >
@@ -125,7 +125,7 @@ export default function Navbar() {
             aria-label="Ir para página de login"
             role="menuitem"
             tabIndex={open ? 0 : -1}
-            className="border border-snow p-2 px-8 font-bold hover:bg-snow hover:text-black transition-colors"
+            className="border border-snow p-2 px-8 font-bold hover:bg-snow hover:text-black active:bg-snow active:text-black focus:bg-snow focus:text-black transition-colors"
           >
             Login
           </Link>

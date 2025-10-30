@@ -38,7 +38,7 @@ export default function Footer() {
                     <Link
                       href={'/'}
                       aria-label={list}
-                      className="text-fot font-sub font-normal hover:text-snow transition-colors"
+                      className="text-fot font-sub font-normal hover:text-snow active:text-snow focus:text-snow transition-colors"
                     >
                       {list}
                     </Link>
@@ -51,7 +51,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <p className="text-center text-fot font-sub font-normal mt-12 pt-8 border-t border-fot/20 2xl:text-xl">
+      <p className="text-center text-fot font-sub font-normal mt-12 pt-8 border-t border-fot/20">
         2025 © CalisthenyX • Todos os direitos reservados | Desenvolvido por
         danilo1opes
       </p>
