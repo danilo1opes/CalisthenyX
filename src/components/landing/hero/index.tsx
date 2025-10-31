@@ -24,7 +24,7 @@ export default function HeroSection() {
             <span
               role="note"
               aria-label="Treino seis vezes por semana"
-              className="text-sm uppercase font-bold absolute top-25 left-[180px] md:top-28 md:left-[215px] lg:top-38 lg:left-[280px] 2xl:top-10 2xl:left-[525px] leading-tight bg-brand text-white px-2 py-2 lg:px-3 lg:py-4 rounded-xs shadow-2xl"
+              className="text-sm uppercase font-bold absolute top-25 left-[180px] md:top-28 md:left-[215px] lg:top-38 lg:left-[280px] 2xl:top-11 2xl:left-[525px] leading-tight bg-brand text-white px-2 py-2 lg:px-3 lg:py-4 rounded-xs shadow-2xl"
             >
               6x
               <br aria-hidden="true" />
