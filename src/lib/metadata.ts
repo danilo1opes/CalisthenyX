@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: 'CalisthenyX - Modele Seu Corpo',
   description:
     'Plataforma completa de treinos de calistenia com programas personalizados, acompanhamento profissional e comunidade ativa.',
+  icons: {
+    icon: '/favicon.ico',
+  },
   openGraph: {
     type: 'website',
     url: baseUrl,
@@ -28,9 +31,6 @@ export const metadata: Metadata = {
     description:
       'Transforme seu corpo com treinos personalizados de calistenia.',
     images: [`${baseUrl}/twitter-image.png`],
-  },
-  icons: {
-    icon: '/favicon.ico',
   },
   alternates: {
     canonical: baseUrl,
