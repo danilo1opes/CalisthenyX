@@ -80,18 +80,17 @@ export default function Navbar() {
         {/* Menu Desktop */}
         <ul
           className="text-snow hidden md:flex md:gap-16 lg:gap-32 font-body"
-          role="menubar"
           aria-label="Links principais do site"
         >
           {items.map((item, index) => (
-            <NavItem
-              key={index}
-              url={item.url}
-              label={item.label}
-              isActive={pathname === item.url}
-              ariaCurrent={pathname === item.url ? 'page' : undefined}
-              role="none"
-            />
+            <li key={index}>
+              <NavItem
+                url={item.url}
+                label={item.label}
+                isActive={pathname === item.url}
+                ariaCurrent={pathname === item.url ? 'page' : undefined}
+              />
+            </li>
           ))}
         </ul>
 

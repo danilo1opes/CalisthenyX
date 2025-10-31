@@ -17,8 +17,8 @@ export default function Personal() {
               fill
               alt="Retrato de Danilo Lopes, personal trainer especializado em calistenia"
               className="rounded-full object-cover shadow-2xl ring-4 ring-snow/10"
+              sizes="(max-width: 768px) 192px, (max-width: 1024px) 224px, 256px"
               priority
-              role="img"
             />
           </div>
         </div>
