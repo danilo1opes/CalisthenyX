@@ -23,16 +23,14 @@
 
 ## 🎯 Sobre o Projeto
 
-**CalisthenyX** é uma plataforma completa de treinos de calistenia que oferece:
+**CalisthenyX** é uma **Landing Page** demonstrativa sobre treinos de calistenia que apresenta:
 
-- 🏋️ Programas personalizados de treino
-- 👨‍🏫 Acompanhamento profissional
-- 📈 Sistema de progressão
-- 🎥 Vídeos tutoriais
-- 💬 Comunidade ativa
+- 🏋️ Planos e tipos de treino
+- 👨‍🏫 Benefícios da calistenia
+- 🎥 Seções ilustrativas com imagens
 - 📱 Design responsivo e acessível
 
-A plataforma foi desenvolvida com foco em **performance**, **acessibilidade** e **SEO otimizado**.
+A plataforma foi desenvolvida com foco em **performance**, **acessibilidade** e **SEO otimizado**, servindo como uma vitrine visual do conceito da plataforma **CalisthenyX**.
 
 ---
 
