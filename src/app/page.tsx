@@ -8,28 +8,44 @@ import Pricing from '@/components/landing/preco';
 import Program from '@/components/landing/program';
 import ChooseUs from '@/components/landing/us';
 
-export default async function HomePage() {
+export default function HomePage() {
   return (
     <>
-      <div className="bg-hero-gradient">
+      <header className="bg-hero-gradient">
         <Navbar />
         <HeroSection />
-      </div>
+      </header>
 
-      <section>
-        <Program />
-        <ReadyBody />
-        <AboutUs />
-        <Pricing />
-        <div className="bg-gradient-to-r from-brand via-brand/44 to-brand/0">
+      <main id="main-content">
+        <section aria-label="Modalidades">
+          <Program />
+        </section>
+
+        <section aria-label="Prepare seu corpo">
+          <ReadyBody />
+        </section>
+
+        <section aria-label="Sobre nós">
+          <AboutUs />
+        </section>
+
+        <section aria-label="Preços">
+          <Pricing />
+        </section>
+
+        <section
+          aria-label="Treinamento personalizado"
+          className="bg-gradient-to-r from-brand via-brand/44 to-brand/0"
+        >
           <Personal />
-        </div>
-        <ChooseUs />
-      </section>
+        </section>
 
-      <footer>
-        <Footer />
-      </footer>
+        <section aria-label="Por que nos escolher">
+          <ChooseUs />
+        </section>
+      </main>
+
+      <Footer />
     </>
   );
 }

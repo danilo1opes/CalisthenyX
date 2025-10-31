@@ -2,15 +2,15 @@ import { NavbarItem } from '@/ui/navitem';
 
 export const items: Array<NavbarItem> = [
   {
-    url: '/',
+    url: '#inicio',
     label: 'Inicio',
   },
   {
-    url: '/',
+    url: '#servicos',
     label: 'Serviços',
   },
   {
-    url: '/',
+    url: '#contato',
     label: 'Contato',
   },
 ];

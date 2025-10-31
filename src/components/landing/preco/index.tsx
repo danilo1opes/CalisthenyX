@@ -5,6 +5,8 @@ import { FiCheck } from 'react-icons/fi';
 export default function Pricing() {
   return (
     <section
+      id="servicos"
+      role="region"
       aria-labelledby="pricing-title"
       className="container px-6 py-12 md:pt-12 md:pb-24"
     >
@@ -17,27 +19,36 @@ export default function Pricing() {
           Planos
         </h2>
       </header>
+
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-12 items-center md:justify-center">
         {prices.map((price, index) => (
           <article
             key={index}
+            role="article"
+            aria-labelledby={`plan-title-${index}`}
+            aria-describedby={`plan-desc-${index} plan-benefits-${index}`}
             className={`border-gray rounded-4xl transition-all md:max-w-md md:mx-auto lg:max-w-none lg:mx-0 ${
               index == 1
                 ? 'bg-gradient-to-b from-linear-snow to-linear-dark px-6 md:px-8 py-6 lg:scale-110 shadow-2xl'
                 : 'bg-program border px-6 py-4 shadow-xl'
             }`}
-            aria-label={`Plano ${price.title} - R$${price.value} por mês`}
           >
             <div className="h-full flex flex-col">
               {/* Title Card */}
-              <h3 className="text-snow font-value text-lg md:text-xl font-semibold after:content-[''] after:block after:w-full after:h-[1px] after:bg-snow after:mt-4">
+              <h3
+                id={`plan-title-${index}`}
+                className="text-snow font-value text-lg md:text-xl font-semibold after:content-[''] after:block after:w-full after:h-[1px] after:bg-snow after:mt-4"
+              >
                 Plano {price.title}
               </h3>
 
               {/* Price Card */}
               <div className="flex gap-3 md:gap-4 mt-4 items-end">
-                <p className="text-4xl md:text-5xl lg:text-6xl text-snow font-sub">
-                  <span className="sr-only">Preço: </span>R${price.value}
+                <p
+                  className="text-4xl md:text-5xl lg:text-6xl text-snow font-sub"
+                  id={`plan-price-${index}`}
+                >
+                  <span className="sr-only">Preço:</span> R${price.value}
                 </p>
                 <p
                   className={`font-value font-semibold text-2xl md:text-3xl lg:text-4xl ${
@@ -48,11 +59,15 @@ export default function Pricing() {
                 </p>
               </div>
 
-              <p className="mt-2 text-snow font-sub font-light text-sm md:text-base">
+              <p
+                id={`plan-desc-${index}`}
+                className="mt-2 text-snow font-sub font-light text-sm md:text-base"
+              >
                 {price.description}
               </p>
 
               <ul
+                id={`plan-benefits-${index}`}
                 className="space-y-4 md:space-y-6 mt-6 flex-grow"
                 aria-label={`Benefícios do plano ${price.title}`}
               >
@@ -75,7 +90,8 @@ export default function Pricing() {
 
               <div className="mt-6 mb-2">
                 <Button
-                  aria-label={`Assinar plano ${price.title} por R$${price.value} por mês`}
+                  aria-label={`Assinar o plano ${price.title} — R$${price.value} por mês`}
+                  aria-describedby={`plan-benefits-${index}`}
                   href="/"
                   variant={index === 1 ? 'mobile' : 'outline'}
                 >

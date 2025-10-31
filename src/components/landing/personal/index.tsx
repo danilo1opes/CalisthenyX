@@ -2,7 +2,12 @@ import Image from 'next/image';
 
 export default function Personal() {
   return (
-    <section className="container mx-auto px-4 py-12">
+    <section
+      className="container mx-auto px-4 py-12"
+      role="region"
+      aria-labelledby="personal-heading"
+      aria-describedby="personal-description"
+    >
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 max-w-4xl mx-auto">
         {/* Profile Image */}
         <div className="relative flex-shrink-0">
@@ -10,9 +15,10 @@ export default function Personal() {
             <Image
               src="/lopes.png"
               fill
-              alt="Personal Trainer - Danilo Lopes"
+              alt="Retrato de Danilo Lopes, personal trainer especializado em calistenia"
               className="rounded-full object-cover shadow-2xl ring-4 ring-snow/10"
               priority
+              role="img"
             />
           </div>
         </div>
@@ -20,15 +26,21 @@ export default function Personal() {
         {/* Content */}
         <div className="flex flex-col text-center md:text-left max-w-xl">
           <div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-value font-semibold text-snow mb-2 tracking-tight">
+            <h1
+              id="personal-heading"
+              className="text-4xl md:text-5xl lg:text-6xl font-value font-semibold text-snow mb-2 tracking-tight"
+            >
               Danilo Lopes
             </h1>
-            <p className="text-xl md:text-2xl font-light font-sub text-snow  tracking-wide">
+            <p className="text-xl md:text-2xl font-light font-sub text-snow tracking-wide">
               Calistenico
             </p>
           </div>
 
-          <p className="text-base md:text-lg font-light font-sub text-snow leading-relaxed">
+          <p
+            id="personal-description"
+            className="text-base md:text-lg font-light font-sub text-snow leading-relaxed"
+          >
             Transforme seu corpo usando apenas o peso corporal. Especialista em
             calistenia com anos de experiência em treinos funcionais e
             desenvolvimento de força natural.

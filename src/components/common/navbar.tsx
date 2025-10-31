@@ -11,7 +11,7 @@ export default function Navbar() {
   const [open, setOpen] = React.useState<boolean>(false);
   const pathname = usePathname();
 
-  const toogleMenu = (): void => {
+  const toggleMenu = (): void => {
     setOpen(!open);
   };
 
@@ -27,40 +27,61 @@ export default function Navbar() {
     return () => document.removeEventListener('keydown', handleEsc);
   }, []);
 
+  // Previne scroll
+  React.useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [open]);
+
   return (
-    <header className="container py-8">
+    <header className="container py-8" role="banner">
       <nav
         aria-label="Navegação principal"
         className="flex justify-between items-center"
       >
         {/* Logo */}
-
         <Link
           href="/"
-          aria-label="Página inicial da CalisthenyX"
+          aria-label="Voltar para a página inicial"
           className="text-snow text-3xl md:text-4xl font-bold font-title tracking-wide"
         >
-          Calisteny
-          <span className="text-brand text-4xl md:text-5xl font-title">X</span>
+          <span aria-hidden="true">
+            Calisteny
+            <span className="text-brand text-4xl md:text-5xl font-title">
+              X
+            </span>
+          </span>
         </Link>
 
+        {/* Button Mobile */}
         <button
-          onClick={toogleMenu}
+          onClick={toggleMenu}
           className="text-snow text-3xl md:hidden z-50 cursor-pointer"
           aria-expanded={open}
           aria-controls="menu-mobile"
+          aria-haspopup="true"
           aria-label={
             open ? 'Fechar menu de navegação' : 'Abrir menu de navegação'
           }
         >
-          {open ? <FaTimes size={28} /> : <FaBars size={28} />}
+          {open ? (
+            <FaTimes size={28} aria-hidden="true" />
+          ) : (
+            <FaBars size={28} aria-hidden="true" />
+          )}
         </button>
 
-        {/* Menu */}
-
+        {/* Menu Desktop */}
         <ul
           className="text-snow hidden md:flex md:gap-16 lg:gap-32 font-body"
           role="menubar"
+          aria-label="Links principais do site"
         >
           {items.map((item, index) => (
             <NavItem
@@ -68,68 +89,62 @@ export default function Navbar() {
               url={item.url}
               label={item.label}
               isActive={pathname === item.url}
-              role="menuitem"
               ariaCurrent={pathname === item.url ? 'page' : undefined}
+              role="none"
             />
           ))}
         </ul>
 
-        {/* Login */}
+        {/* Login Desktop */}
         <Link
           href="/"
-          className="hidden md:block text-snow p-2 px-8 border border-snow font-body font-bold hover:bg-snow hover:text-black transition-colors"
-          aria-label="Ir para página de login"
+          className="hidden md:block text-snow p-2 px-8 border border-snow font-body font-bold hover:bg-snow hover:text-black transition-colors focus:outline-none focus:ring-2 focus:ring-brand"
         >
           Login
         </Link>
 
         {/* Menu Mobile */}
-        <div
-          id="menu-mobile"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="menu-title"
-          className={`fixed top-0 left-0 w-full h-full bg-black/100 flex flex-col items-center justify-center gap-10 text-snow text-2xl font-body transform transition-transform duration-500 ease-in-out z-2 ${
-            open ? 'translate-x-0' : '-translate-x-full'
-          } md:hidden`}
-        >
-          <h2 id="menu-title" className="sr-only">
-            Menu de navegação principal
-          </h2>
-
-          <ul
-            role="menu"
-            aria-label="Menu principal"
-            className="flex flex-col items-center gap-10"
+        {open && (
+          <div
+            id="menu-mobile"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="menu-mobile-title"
+            className="fixed inset-0 w-full h-full bg-black/100 flex flex-col items-center justify-center gap-10 text-snow text-2xl font-body z-40 md:hidden"
           >
-            {items.map((item, index) => (
-              <Link
-                key={index}
-                href={item.url}
-                onClick={closeMenu}
-                role="menuitem"
-                tabIndex={open ? 0 : -1}
-                aria-current={pathname === item.url ? 'page' : undefined}
-                className={`hover:text-brand active:text-brand focus:text-brand ${
-                  pathname === item.url ? 'text-snow' : ''
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </ul>
+            <h2 id="menu-mobile-title" className="sr-only">
+              Menu de navegação principal
+            </h2>
 
-          <Link
-            href="/"
-            onClick={closeMenu}
-            aria-label="Ir para página de login"
-            role="menuitem"
-            tabIndex={open ? 0 : -1}
-            className="border border-snow p-2 px-8 font-bold hover:bg-snow hover:text-black active:bg-snow active:text-black focus:bg-snow focus:text-black transition-colors"
-          >
-            Login
-          </Link>
-        </div>
+            <nav aria-label="Menu mobile">
+              <ul className="flex flex-col items-center gap-10" role="menu">
+                {items.map((item, index) => (
+                  <li key={index} role="none">
+                    <Link
+                      href={item.url}
+                      onClick={closeMenu}
+                      aria-current={pathname === item.url ? 'page' : undefined}
+                      role="menuitem"
+                      className={`hover:text-brand focus:text-brand focus:outline-none focus:ring-2 focus:ring-brand ${
+                        pathname === item.url ? 'text-brand font-bold' : ''
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            <Link
+              href="/"
+              onClick={closeMenu}
+              className="border border-snow p-2 px-8 font-bold hover:bg-snow hover:text-black focus:bg-snow focus:text-black focus:outline-none focus:ring-2 focus:ring-brand transition-colors"
+            >
+              Login
+            </Link>
+          </div>
+        )}
       </nav>
     </header>
   );

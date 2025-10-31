@@ -6,6 +6,8 @@ import Link from 'next/link';
 export default function Program() {
   return (
     <section
+      id="inicio"
+      role="region"
       aria-labelledby="program-heading"
       className="bg-program-radial pt-12 md:pt-14"
     >
@@ -25,6 +27,9 @@ export default function Program() {
           {program.map((item) => (
             <article
               key={item.id}
+              role="article"
+              aria-labelledby={`program-title-${item.id}`}
+              aria-describedby={`program-desc-${item.id}`}
               className="bg-program border border-snow text-snow py-8 px-6 md:py-10 md:px-8 lg:py-12 lg:px-10 xl:py-14 xl:px-12 space-y-4 md:space-y-5 lg:space-y-6 hover:border-brand active:border-brand focus:border-brand transition-colors"
             >
               {/* Image Card */}
@@ -32,23 +37,32 @@ export default function Program() {
                 src={item.icon}
                 width={60}
                 height={60}
+                role="img"
                 className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16"
-                alt={item.iconAlt}
+                alt={item.iconAlt || `Ícone da modalidade ${item.title}`}
               />
 
               {/* Title and Description Card */}
-              <h2 className="font-title text-lg md:text-xl lg:text-2xl">
+              <h2
+                id={`program-title-${item.id}`}
+                className="font-title text-lg md:text-xl lg:text-2xl"
+              >
                 {item.title}
               </h2>
-              <p className="font-sub text-sm md:text-base lg:text-base font-light text-body leading-relaxed">
+
+              <p
+                id={`program-desc-${item.id}`}
+                className="font-sub text-sm md:text-base lg:text-base font-light text-body leading-relaxed"
+              >
                 {item.description}
               </p>
 
               {/* Button Card */}
               <Link
+                href="/"
                 aria-label={`Saiba mais sobre ${item.title}`}
+                aria-describedby={`program-desc-${item.id}`}
                 className="font-body flex items-center gap-3 md:gap-4 text-sm md:text-base hover:text-brand active:text-brand focus:text-brand transition-colors pt-2"
-                href={'/'}
               >
                 {item.link}
                 <FaArrowRightLong size={20} aria-hidden="true" />
