@@ -68,7 +68,7 @@ export default function Footer() {
         className="text-center text-fot font-sub font-normal mt-12 pt-8 border-t border-fot/20"
         aria-label="Informações legais e direitos autorais"
       >
-        <p>
+        <div>
           <span itemScope itemType="https://schema.org/Organization">
             <meta itemProp="name" content="CalisthenyX" />
             <time dateTime={currentYear.toString()}>{currentYear}</time> ©{' '}
@@ -89,7 +89,7 @@ export default function Footer() {
               danilo1opes
             </Link>
           </span>
-        </p>
+        </div>
       </div>
     </footer>
   );

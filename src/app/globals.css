@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 @import 'tailwindcss';
 
 @theme {
   --color-snow: #ffffff;
   --color-surface: #1d2429;
-  --color-brand: #fd4c00;
+  --color-brand: #d35400;
   --color-program: #232a2f99;
   --color-hover: #2d3748;
   --color-body: #cccccc;

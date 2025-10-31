@@ -109,7 +109,7 @@ export default function Navbar() {
             role="dialog"
             aria-modal="true"
             aria-labelledby="menu-mobile-title"
-            className="fixed inset-0 w-full h-full bg-black/100 flex flex-col items-center justify-center gap-10 text-snow text-2xl font-body z-40 md:hidden"
+            className="fixed inset-0 w-full h-full bg-black flex flex-col items-center justify-center gap-10 text-snow text-2xl font-body z-40 md:hidden"
           >
             <h2 id="menu-mobile-title" className="sr-only">
               Menu de navegação principal
