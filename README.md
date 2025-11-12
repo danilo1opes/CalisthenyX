@@ -68,34 +68,34 @@ A plataforma foi desenvolvida com foco em **performance**, **acessibilidade** e 
 
 ### 🎨 Design & UX
 
-- ✅ Design responsivo (Mobile-first)
-- ✅ Animações e transições suaves
-- ✅ Gradientes personalizados
-- ✅ Tema customizado com Tailwind v4
+- ▪️ Design responsivo (Mobile-first)
+- ▪️ Animações e transições suaves
+- ▪️ Gradientes personalizados
+- ▪️ Tema customizado com Tailwind v4
 
 ### ♿ Acessibilidade
 
-- ✅ Navegação por teclado completa
-- ✅ Atributos ARIA semânticos
-- ✅ Contraste de cores
-- ✅ Screen reader friendly
-- ✅ Focus indicators visíveis
+- ▪️ Navegação por teclado completa
+- ▪️ Atributos ARIA semânticos
+- ▪️ Contraste de cores
+- ▪️ Screen reader friendly
+- ▪️ Focus indicators visíveis
 
 ### 🔍 SEO
 
-- ✅ Metadados otimizados (Open Graph, Twitter Cards)
-- ✅ Sitemap.xml automático
-- ✅ Robots.txt configurado
-- ✅ Imagens com alt text descritivo
-- ✅ Estrutura semântica HTML5
+- ▪️ Metadados otimizados (Open Graph, Twitter Cards)
+- ▪️ Sitemap.xml automático
+- ▪️ Robots.txt configurado
+- ▪️ Imagens com alt text descritivo
+- ▪️ Estrutura semântica HTML5
 
 ### ⚡ Performance
 
-- ✅ Turbopack para builds rápidos
-- ✅ Critical CSS inline
-- ✅ Image optimization automática
-- ✅ Code splitting inteligente
-- ✅ Bundle size otimizado
+- ▪️ Turbopack para builds rápidos
+- ▪️ Critical CSS inline
+- ▪️ Image optimization automática
+- ▪️ Code splitting inteligente
+- ▪️ Bundle size otimizado
 
 ---
 
